@@ -5,7 +5,7 @@ export const faqData = {
       answer: "Our commercial desk reviews all submissions promptly. You can expect a detailed response from one of our global specialists within one business day."
     },
     {
-    question: "Where is your global headquarters located?",
+    question: "Where is your global headquarter located?",
     answer: "Our headquarters is strategically located in Office 1707, Damac XL Tower, Marasi Drive, Business Bay, Dubai, UAE. We also operate with connected offices in Singapore, India, Saudi Arabia, and the USA."
   },
   {
