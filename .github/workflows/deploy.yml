@@ -38,5 +38,5 @@ jobs:
           port: 21
           protocol: ftps
           local-dir: frontend/dist/
-          server-dir: ./public_html/
+          server-dir: ./
           timeout: 3000000
