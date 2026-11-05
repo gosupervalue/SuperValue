@@ -187,7 +187,7 @@ export default function Header() {
         {/* MOBILE BOTTOM CONTACT SECTION */}
         <div className="mt-auto pt-6 flex flex-col gap-5 border-t border-slate-100">
           <a 
-            href="https://wa.me/917292023399" 
+            href="https://wa.me/971529607401" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 text-[16px] font-bold text-[#0B1E3A] hover:text-[#25D366] transition-colors group"
