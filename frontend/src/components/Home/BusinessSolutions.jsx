@@ -106,7 +106,7 @@ export default function BusinessSolutions() {
             <span className="w-12 h-[1px] bg-[#f3790a]"></span>
           </div>
           
-          <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold text-[#0B1E3A] tracking-tight leading-[1.15] mb-5">
+          <h2 className="text-3xl md:text-5xl  font-semibold text-[#0B1E3A] tracking-tight leading-[1.15] mb-5">
             How We Help Businesses <br className="hidden md:block" /> Move Beyond Borders
           </h2>
           <p className="text-slate-500 text-sm md:text-base max-w-2xl leading-relaxed">
@@ -122,7 +122,7 @@ export default function BusinessSolutions() {
             <Link 
               to={item.linkTo} 
               key={index}
-              className="sol-card group relative bg-white rounded-3xl p-8 flex flex-col h-full border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_rgba(11,30,58,0.06)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10"
+              className="sol-card group relative bg-white rounded-3xl p-6 flex flex-col h-full border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_rgba(11,30,58,0.06)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10"
             >
               {/* Subtle top border highlight on hover */}
               <div className="absolute top-0 left-0 w-full h-1 bg-[#f3790a] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
@@ -146,7 +146,7 @@ export default function BusinessSolutions() {
               <h3 className="text-[#0B1E3A] font-bold text-xl mb-4 leading-tight group-hover:text-orange-500 transition-colors duration-300">
                 {item.title}
               </h3>
-              <p className="text-slate-500 text-sm leading-relaxed mb-10 flex-grow">
+              <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
                 {item.desc}
               </p>
 

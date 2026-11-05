@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { FaWhatsapp } from 'react-icons/fa'; // Importing React Icons WhatsApp
 import logoImg from '../assets/img/logo.png';
 
+
 export default function Header() {
   const headerRef = useRef(null);
   const location = useLocation();
@@ -15,7 +16,7 @@ export default function Header() {
   // ============================================================================
   // PAGE-WISE NAVBAR COLOR LOGIC
   // ============================================================================
-  const lightHeroPages = ['/example-light-page', '/faq', '/gallery', '/blogs']; 
+  const lightHeroPages = ['/example-light-page', '/faq', '/gallery', '/blogs','/thank-you']; // Add more paths as needed
   const isLightPage = lightHeroPages.includes(location.pathname);
   
   const navTextColor = isScrolled 

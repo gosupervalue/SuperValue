@@ -20,6 +20,7 @@ import Gallery from './pages/Gallery';
 import ScrollRestoration from './components/ScrollRestoration';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import ThankYou from './components/Contact/ThankYou';  // Import the Thank You page
 
 
 function App() {
@@ -59,6 +60,7 @@ function AppShell() {
          <Route path="/gallery" element={<Gallery />} /> 
          <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/thank-you" element={<ThankYou />} />  {/* Route for Thank You page */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

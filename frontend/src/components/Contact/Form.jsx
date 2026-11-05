@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { handleSuccess, handleError } from './HandleUtils'; // Adjust path if necessary
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Form() {
+  const navigate = useNavigate();
   const containerRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -34,9 +36,18 @@ export default function Form() {
 });
       const data = await response.json();
 
-      if (data.success) {
-        handleSuccess("Thank you! Your enquiry has been routed to our desk.");
+  if (data.success) {
+        // 1. Show the success toast message immediately
+        handleSuccess("Success! Redirecting...");
+        
+        // 2. Clear the form
         setFormData({ firstName: '', lastName: '', email: '', phone: '', sector: '', message: '' });
+        
+        // 3. Wait 1.5 seconds so they can read the toast message, then redirect to the Thank You page
+        setTimeout(() => {
+          navigate('/thank-you');
+        }, 1500);
+        
       } else {
         handleError(data.message || "Failed to send email.");
       }
