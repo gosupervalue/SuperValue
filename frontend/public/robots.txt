@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+
+# Point bots directly to your sitemap
+Sitemap: https://gosupervalue.com/sitemap.xml

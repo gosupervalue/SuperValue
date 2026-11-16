@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url><loc>https://gosupervalue.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://gosupervalue.com/about</loc><priority>0.8</priority></url>
+  <url><loc>https://gosupervalue.com/contact</loc><priority>0.8</priority></url>
+  
+  <!-- Sectors -->
+  <url><loc>https://gosupervalue.com/silvermax-blade</loc><priority>0.9</priority></url>
+  <url><loc>https://gosupervalue.com/personal-care</loc><priority>0.9</priority></url>
+  <url><loc>https://gosupervalue.com/perfumery</loc><priority>0.9</priority></url>
+  <url><loc>https://gosupervalue.com/automobiles</loc><priority>0.9</priority></url>
+  
+  <!-- Media & Content -->
+  <url><loc>https://gosupervalue.com/gallery</loc><priority>0.7</priority></url>
+  <url><loc>https://gosupervalue.com/blogs</loc><priority>0.9</priority></url>
+  
+  <!-- Specific Blogs (Update these URLs when you write real blog slugs) -->
+  <url><loc>https://gosupervalue.com/blogs/future-of-private-label-perfumery</loc><priority>0.8</priority></url>
+  <url><loc>https://gosupervalue.com/blogs/fmcg-global-supply-chain-trends</loc><priority>0.8</priority></url>
+  <url><loc>https://gosupervalue.com/blogs/automotive-spare-parts-export-guide</loc><priority>0.8</priority></url>
+</urlset>
