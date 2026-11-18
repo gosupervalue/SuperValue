@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
-import { FaWhatsapp } from 'react-icons/fa'; // Importing React Icons WhatsApp
+import { FaWhatsapp } from 'react-icons/fa'; 
 import logoImg from '../assets/img/logo.png';
-
 
 export default function Header() {
   const headerRef = useRef(null);
@@ -16,7 +15,7 @@ export default function Header() {
   // ============================================================================
   // PAGE-WISE NAVBAR COLOR LOGIC
   // ============================================================================
-  const lightHeroPages = ['/example-light-page', '/faq', '/gallery', '/blogs','/thank-you']; // Add more paths as needed
+  const lightHeroPages = ['/example-light-page', '/faq', '/gallery', '/blogs', '/thank-you'];
   const isLightPage = lightHeroPages.includes(location.pathname);
   
   const navTextColor = isScrolled 
@@ -62,7 +61,8 @@ export default function Header() {
           />
         </Link>
 
-      <button 
+        {/* POLISHED HAMBURGER BUTTON */}
+        <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={`md:hidden relative z-[60] p-2 focus:outline-none cursor-pointer transition-colors duration-300 ${isMobileMenuOpen ? 'text-[#0B1E3A]' : 'text-inherit'}`}
         >
@@ -85,11 +85,7 @@ export default function Header() {
               </svg>
             </button>
             
-            {/* ========================================================================= */}
-            {/* REFINED MEGA MENU CARD                                                    */}
-            {/* ========================================================================= */}
             <div className="absolute top-full left-1/2 -translate-x-1/2 w-[550px] md:w-[640px] bg-white shadow-[0_20px_50px_rgba(11,30,58,0.1)] rounded-2xl p-4 grid grid-cols-2 gap-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-slate-100 z-50 text-left">
-
                <Link to="/silvermax-blade" className="p-3 rounded-xl bg-transparent hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all duration-300 flex flex-col gap-1.5 group/item">
                 <div className="flex items-center justify-between w-full">
                   <span className="text-[#0B1E3A] font-bold text-sm group-hover/item:text-orange-500 transition-colors duration-300">Silvermax Blades</span>
@@ -121,7 +117,6 @@ export default function Header() {
                 </div>
                 <span className="text-slate-500 text-[12px] font-medium leading-relaxed pr-2">Vehicles, tires, tubes & spare parts</span>
               </Link>
-
             </div>
           </div>
 
@@ -130,29 +125,29 @@ export default function Header() {
         </nav>
 
        <div className="hidden md:flex items-center gap-6">
-  <a 
-    href="https://wa.me/971529607401" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 font-bold group"
-  >
-    <FaWhatsapp className="text-[2rem] text-[#25D366] group-hover:scale-110 transition-transform duration-300" />
-  </a>
-  <Link to="/contact" className="bg-[#f3790a] hover:bg-orange-600 text-white font-bold text-sm px-6 py-2.5 rounded transition-all shadow-sm">
-    Get In Touch
-  </Link>
-</div>         
+          <a 
+            href="https://wa.me/971529607401" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 font-bold group"
+          >
+            <FaWhatsapp className="text-[2rem] text-[#25D366] group-hover:scale-110 transition-transform duration-300" />
+          </a>
+          <Link to="/contact" className="bg-[#f3790a] hover:bg-orange-600 text-white font-bold text-sm px-6 py-2.5 rounded transition-all shadow-sm">
+            Get In Touch
+          </Link>
+        </div>         
       </div>
 
-      {/* MOBILE SIDEBAR OVERLAY */}
+      {/* POLISHED MOBILE SIDEBAR OVERLAY (Faster 300ms fade) */}
       <div 
         onClick={() => setIsMobileMenuOpen(false)}
-        className={`fixed inset-0 bg-[#0B1E3A]/40 backdrop-blur-sm z-[50] md:hidden transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+        className={`fixed inset-0 bg-[#0B1E3A]/40 backdrop-blur-sm z-[50] md:hidden transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
       ></div>
 
-      {/* MOBILE SIDEBAR MENU */}
+      {/* POLISHED MOBILE SIDEBAR MENU (Snappy transform slide instead of CSS right) */}
       <div 
-        className={`fixed top-0 h-[100dvh] w-[70%] max-w-[340px] bg-white border-l border-slate-100 z-[55] shadow-[-20px_0_50px_rgba(11,30,58,0.1)] md:hidden flex flex-col pt-24 px-6 pb-8 transition-all duration-500 ease-in-out ${isMobileMenuOpen ? 'right-0 visible' : '-right-[100%] invisible'}`}
+        className={`fixed top-0 right-0 h-[100dvh] w-[70%] max-w-[340px] bg-white border-l border-slate-100 z-[55] shadow-[-20px_0_50px_rgba(11,30,58,0.1)] md:hidden flex flex-col pt-24 px-6 pb-8 transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex flex-col gap-6 overflow-y-auto overflow-x-hidden h-full no-scrollbar pr-2">
           
@@ -170,7 +165,6 @@ export default function Header() {
               </svg>
             </button>
             
-            {/* Animated Dropdown Items */}
             <div className={`flex flex-col gap-5 overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-[300px] mt-5 opacity-100 pl-4' : 'max-h-0 opacity-0 pl-4'}`}>
               <Link to="/silvermax-blade" className="text-[15px] font-semibold text-slate-600 hover:text-orange-500 transition-colors">Silvermax Blades</Link>
               <Link to="/personal-care" className="text-[15px] font-semibold text-slate-600 hover:text-orange-500 transition-colors">FMCG & Personal Care</Link>
@@ -184,7 +178,6 @@ export default function Header() {
           <Link to="/contact" className="text-[17px] font-bold text-[#0B1E3A] hover:text-orange-500 transition-colors border-b border-slate-100 pb-4">Contact Us</Link>
         </div>
         
-        {/* MOBILE BOTTOM CONTACT SECTION */}
         <div className="mt-auto pt-6 flex flex-col gap-5 border-t border-slate-100">
           <a 
             href="https://wa.me/971529607401" 
@@ -195,7 +188,6 @@ export default function Header() {
             <div className="flex items-center justify-center text-[#25D366]">
               <FaWhatsapp className="text-3xl" />
             </div>
-            
           </a>
           <Link to="/contact" className="bg-[#f3790a] hover:bg-[#d9660a] text-white font-bold py-3.5 text-center rounded-xl w-full shadow-md hover:shadow-lg transition-all duration-300">
             Get a Quote
