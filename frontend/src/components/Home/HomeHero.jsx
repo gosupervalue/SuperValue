@@ -89,7 +89,7 @@ const slides = [
             {/* Seamless Dark Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#07101E]/95 via-[#07101E]/40 to-[#07101E]/30"></div>
 
-            <div className="relative z-20 flex flex-col w-full h-full justify-end max-w-[1400px] mx-auto px-[clamp(1.5rem,5vw,4rem)] pb-[10vh]">
+            <div className="relative z-20 flex flex-col w-full h-full justify-end max-w-[1400px] mx-auto px-[clamp(1.5rem,5vw,4rem)] pb-[10vh] md:pb-[15vh]">
 
               <div className="slide-anim flex items-center gap-3 mb-4">
                 <span className="w-8 h-[2px] bg-orange-500"></span>
