@@ -62,9 +62,9 @@ export default function Header() {
           />
         </Link>
 
-        <button 
+      <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden relative z-[60] p-2 focus:outline-none cursor-pointer text-inherit"
+          className={`md:hidden relative z-[60] p-2 focus:outline-none cursor-pointer transition-colors duration-300 ${isMobileMenuOpen ? 'text-[#0B1E3A]' : 'text-inherit'}`}
         >
           <div className="w-6 flex flex-col gap-1.5 items-end">
             <span className={`h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'w-6 rotate-45 translate-y-2' : 'w-6'}`}></span>

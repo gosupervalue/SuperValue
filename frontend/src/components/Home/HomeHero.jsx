@@ -8,16 +8,45 @@ import slide3 from '../../assets/Home/HomeBanner3.png';
 import slide4 from '../../assets/Home/HomeFmcgBanner.png';
 import slide5 from '../../assets/Home/HomePerfumeBanner.png';
 
+// home banner 
+import slide6 from '../../assets/Home/SilverMaxPhone.png';
+import slide7 from '../../assets/Home/PerfumePhone.png';
+import slide8 from '../../assets/Home/FmcgPhone.png';
+import slide9 from '../../assets/Home/AutoPhone.png';
+
 export default function HomeHero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);
 
-  const slides = [
-    // { id: 1, image: slide1, title: "Premium Perfumery", link: "/perfumery" },
-    { id: 2, image: slide2, title: "Silvermax", link: "/silvermax-blade" },
-     { id: 5, image: slide5, title: "Premium Perfumery", link: "/perfumery" },
-     { id: 4, image: slide4, title: "FMCG & Personal Care", link: "/personal-care" },
-    { id: 3, image: slide3, title: "Automotive Solutions", link: "/automobiles" },
+const slides = [
+    { 
+      id: 2, 
+      image: slide2, 
+      mobileImage: slide6, 
+      title: "Silvermax", 
+      link: "/silvermax-blade" 
+    },
+    { 
+      id: 5, 
+      image: slide5, 
+      mobileImage: slide7, 
+      title: "Premium Perfumery", 
+      link: "/perfumery" 
+    },
+    { 
+      id: 4, 
+      image: slide4, 
+      mobileImage: slide8, 
+      title: "FMCG & Personal Care", 
+      link: "/personal-care" 
+    },
+    { 
+      id: 3, 
+      image: slide3, 
+      mobileImage: slide9, 
+      title: "Automotive Solutions", 
+      link: "/automobiles" 
+    },
   ];
 
   useEffect(() => {
@@ -43,16 +72,24 @@ export default function HomeHero() {
             key={slide.id}
             className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
           >
+           {/* Desktop Banner (Hidden on mobile, block on md and up) */}
             <img
               src={slide.image}
               alt={slide.title}
-              className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15000ms] group-hover:scale-105"
+              className="hidden md:block absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15000ms] group-hover:scale-105"
+            />
+
+            {/* Mobile Banner (Block on mobile, hidden on md and up) */}
+            <img
+              src={slide.mobileImage}
+              alt={slide.title}
+              className="block md:hidden absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15000ms] group-hover:scale-105"
             />
 
             {/* Seamless Dark Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#07101E]/95 via-[#07101E]/40 to-[#07101E]/30"></div>
 
-            <div className="relative z-20 flex flex-col w-full h-full justify-end max-w-[1400px] mx-auto px-[clamp(1.5rem,5vw,4rem)] pb-[15vh]">
+            <div className="relative z-20 flex flex-col w-full h-full justify-end max-w-[1400px] mx-auto px-[clamp(1.5rem,5vw,4rem)] pb-[10vh]">
 
               <div className="slide-anim flex items-center gap-3 mb-4">
                 <span className="w-8 h-[2px] bg-orange-500"></span>
@@ -61,7 +98,7 @@ export default function HomeHero() {
                 </p>
               </div>
 
-              <h1 className="slide-anim text-white font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-8 drop-shadow-lg max-w-3xl">
+              <h1 className="slide-anim text-white font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 drop-shadow-lg max-w-3xl">
                 {slide.title === "Silvermax" ? (
                   <span className="font-black italic uppercase text-white tracking-tighter">
                     SILVERMAX<sup className="text-[0.4em] align-super font-semibold ml-1">&reg;</sup>
